@@ -10,6 +10,38 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/bk2k/bootstrap-package" />
+      <path value="$PROJECT_DIR$/vendor/typo3/class-alias-loader" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-backend" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-belog" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-beuser" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-cli" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-composer-installers" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-core" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-extbase" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-extensionmanager" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-filelist" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-fluid" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-fluid-styled-content" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-form" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-frontend" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-impexp" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-info" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-install" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-reactions" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-rte-ckeditor" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-seo" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-setup" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-sys-note" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-t3editor" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-tstemplate" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-viewpage" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-webhooks" />
+      <path value="$PROJECT_DIR$/vendor/typo3/html-sanitizer" />
+    </include_path>
+  </component>
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />
   </component>

@@ -1,0 +1,14 @@
+base: 'http://cms24.s2310456030.student.kwmhgb.at/'
+languages:
+  -
+    title: Deutsch
+    enabled: true
+    languageId: 0
+    base: /
+    locale: de_DE
+    navigationTitle: DE
+    flag: at
+    hreflang: ''
+    websiteTitle: ''
+rootPageId: 1
+websiteTitle: 'Landwirtschaft'

@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/spec" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/bk2k/bootstrap-package" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-fluid-styled-content" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/georgringer/news" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/class-alias-loader" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-backend" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-belog" />
@@ -15,6 +16,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-core" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-extbase" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-extensionmanager" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-felogin" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-filelist" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-fluid" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/typo3/cms-form" />

@@ -40,6 +40,8 @@
       <path value="$PROJECT_DIR$/vendor/typo3/cms-viewpage" />
       <path value="$PROJECT_DIR$/vendor/typo3/cms-webhooks" />
       <path value="$PROJECT_DIR$/vendor/typo3/html-sanitizer" />
+      <path value="$PROJECT_DIR$/vendor/typo3/cms-felogin" />
+      <path value="$PROJECT_DIR$/vendor/georgringer/news" />
     </include_path>
   </component>
   <component name="PhpStanOptionsConfiguration">

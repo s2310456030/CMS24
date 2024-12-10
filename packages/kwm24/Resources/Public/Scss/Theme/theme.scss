@@ -9,5 +9,15 @@
 @import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
 @import "card";
 #page-header{
-  background-color: blue !important;
+  background-color: lightgreen !important;
+  .nav-link{
+    color: red;
+    font-size: 24px;
+
+  }
+}
+.footer-section-meta{
+  background-color: #FF5023;
+  color: black;
+  font-style: italic;
 }

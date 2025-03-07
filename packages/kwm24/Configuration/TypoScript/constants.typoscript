@@ -62,3 +62,4 @@ plugin.bootstrap_package.settings.scss {
 plugin.tx_felogin_login.view.templateRootPath = EXT:kwm24/Resources/Private/Templates/LoginExt/
 plugin.tx_felogin_login.view.partialRootPath = EXT:kwm24/Resources/Private/Partials/LoginExt/
 plugin.tx_felogin_login.view.layoutRootPath = EXT:kwm24/Resources/Private/Layouts/LoginExt/
+

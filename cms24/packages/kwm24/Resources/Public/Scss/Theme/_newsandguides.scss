@@ -1,0 +1,38 @@
+/* NUR für die alternative Seite */
+.news-list-view.alternative-news-style .card {
+  box-shadow: none !important; /* Kein Schatten */
+  border-radius: 0 !important; /* Ecken entfernen */
+  width: 100% !important;
+  background: transparent !important; /* Hintergrund entfernen */
+  height: auto !important; /* Höhe dynamisch */
+  padding: 0 !important;
+}
+
+/* Optional für Bilder */
+.news-list-view.alternative-news-style .news-img-wrap img {
+  border-radius: 0 !important;
+}
+
+/* Responsive Verhalten bleibt */
+@media (max-width: 600px) {
+  .news-list-view.alternative-news-style .news-card-content {
+    flex-direction: column !important;
+  }
+
+  .news-list-view.alternative-news-style .news-img-wrap {
+    width: 100% !important;
+    height: 200px !important;
+  }
+
+  .news-list-view.alternative-news-style .news-text-wrap {
+    width: 100% !important;
+  }
+}
+
+
+
+.article img{
+  max-height: 100% !important;
+  max-width: 100% !important;
+}
+

@@ -1,0 +1,118 @@
+.swiper-container {
+  position: relative; /* Neu: Positionierung für Navigation */
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px 20px 40px 20px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden !important;
+}
+
+/* Navigation Buttons */
+.swiper-button-next,
+.swiper-button-prev {
+  color: #000; /* Farbe der Pfeile */
+  top: 50%; /* Vertikal mittig */
+  transform: translateY(-50%); /* Exakte Zentrierung */
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Pfeile etwas näher an den Container */
+.swiper-button-next {
+  right: 10px;
+}
+
+.swiper-button-prev {
+  left: 10px;
+}
+
+/* Pagination Dots */
+.swiper-pagination {
+  bottom: 10px; /* Abstand vom unteren Rand */
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+  background: #333;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #000;
+}
+
+
+.swiper-wrapper {
+  display: flex;
+}
+
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%; /* WICHTIG: jede Slide nimmt 100% der Containerbreite ein */
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.slide-image {
+  flex: 0 0 70%;
+  max-width: 70%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.slide-image img {
+  width: 100%;
+  max-width: 700px; /* Maximal 700px breit auf großen Bildschirmen */
+  height: auto; /* Höhe wird automatisch passend gehalten */
+  aspect-ratio: 7 / 3; /* Bild bleibt im Verhältnis 700:300 */
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+
+.slide-text {
+  flex: 0 0 28%;
+  max-width: 28%;
+  padding-left: 20px;
+}
+
+.slide-text h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.slide-text p {
+  font-size: 1rem;
+  color: #333;
+}
+.swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+@media (max-width: 600px) {
+  .swiper {
+    padding: 10px;
+  }
+}
+

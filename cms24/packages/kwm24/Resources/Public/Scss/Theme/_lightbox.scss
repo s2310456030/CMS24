@@ -1,0 +1,27 @@
+.lightbox-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+
+.lightbox-gallery li {
+  flex: 0 0 calc(33.333% - 10px);
+}
+
+.lightbox-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.lightbox-gallery img:hover {
+  transform: scale(1.05);
+}
+@media (max-width: 600px) {
+  .lightbox-gallery li {
+    flex: 0 0 100%;
+  }
+}

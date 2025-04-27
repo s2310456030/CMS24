@@ -1,0 +1,71 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:bk2k="http://typo3.org/ns/BK2K/BootstrapPackage/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<f:layout name="Default" />
+
+<f:section name="Main">
+    <!-- Check if the slider data (tx_mask_slider) exists -->
+    <f:if condition="{data.tx_mask_slider}">
+        <!-- Container for the Swiper slider -->
+        <div class="swiper swiper">
+            <div class="swiper-wrapper">
+                <!-- Loop through each slider item -->
+                <f:for each="{data.tx_mask_slider}" as="data_item">
+                    <div class="swiper-slide">
+                        <!-- Loop through each image in the current slider item -->
+                        <f:for each="{data_item.tx_mask_img}" as="file">
+                            <!-- Render the image with specified dimensions -->
+                            <f:media file="{file}" width="1280" height="320"/>
+                        </f:for>
+                    </div>
+                </f:for>
+            </div>
+
+            <!-- Swiper pagination element -->
+            <div class="swiper-pagination"></div>
+
+            <!-- Swiper navigation buttons -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+    </f:if>
+</f:section>
+
+
+<script>
+    /*!
+ * kwm24 v1.0.0 (https://fh-ooe.at/campus-hagenberg)
+ * Copyright 2017-2024 Alexander Wimmer
+ * Licensed under the GPL-2.0-or-later license
+ */
+    // Banner slider
+    const swiper = new Swiper('.swiper', {
+        // Optional parameters
+        direction: 'vertical',
+        loop: true,
+
+        // If we need pagination
+        pagination: {
+            el: '.swiper-pagination',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+
+        // And if we need scrollbar
+        scrollbar: {
+            el: '.swiper-scrollbar',
+        },
+    });
+</script>
+</html>

@@ -1,0 +1,106 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "lightboxgallerie": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_lightboxrepeater"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "lightboxgallerie",
+                    "label": "Lightbox Gallery",
+                    "labels": [
+                        ""
+                    ],
+                    "shortLabel": "",
+                    "sorting": 2
+                }
+            },
+            "sql": {
+                "tx_mask_lightboxrepeater": {
+                    "tt_content": {
+                        "tx_mask_lightboxrepeater": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_lightboxrepeater": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_lightboxrepeater",
+                    "key": "lightboxrepeater",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_lightboxrepeater": {
+            "sql": {
+                "tx_mask_lightboximage": {
+                    "tx_mask_lightboxrepeater": {
+                        "tx_mask_lightboximage": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_lightboximage": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileByUrlAllowed": 1,
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_lightboximage",
+                    "inlineParent": "tx_mask_lightboxrepeater",
+                    "key": "lightboximage",
+                    "onlineMedia": [
+                        "youtube",
+                        "vimeo"
+                    ],
+                    "order": 1,
+                    "type": "media"
+                }
+            }
+        }
+    }
+}

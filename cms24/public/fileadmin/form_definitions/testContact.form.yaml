@@ -1,0 +1,214 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: testContact
+label: Kontaktformular
+prototypeName: standard
+finishers:
+  -
+    options:
+      subject: '{subject}'
+      senderAddress: '{email}'
+      senderName: '{fullname}'
+      replyToRecipients:
+        '{email}': ''
+      format: html
+      attachUploads: true
+      recipients:
+        s2310456030@fhooe.at: 'Alexander Wimmer'
+      addHtmlPart: true
+    identifier: EmailToReceiver
+  -
+    options:
+      message: ''
+      contentElementUid: ''
+    identifier: Confirmation
+  -
+    options:
+      subject: '{subject}'
+      recipients:
+        '{email}': '{fullname}'
+      senderAddress: s2310456030@fhooe.at
+      senderName: ''
+      addHtmlPart: true
+      attachUploads: true
+      title: ''
+    identifier: EmailToSender
+  -
+    options:
+      pageUid: '36'
+      additionalParameters: ''
+      fragment: ''
+    identifier: Redirect
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: 'Nächster Schritt'
+    type: Page
+    identifier: form
+    label: ''
+    renderables:
+      -
+        properties:
+          text: 'Pflichtfelder sind mit * markiert'
+        type: StaticText
+        identifier: mandatory
+        label: 'Deine Daten'
+      -
+        type: GridRow
+        identifier: gridrow
+        label: ''
+        renderables:
+          -
+            type: GridColumn
+            identifier: gridcolumn-left
+            label: ''
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: fullname
+                label: 'Vor- und Nachname'
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: 'Vor- und Nachname'
+                    required: required
+                validators:
+                  -
+                    identifier: NotEmpty
+              -
+                defaultValue: ''
+                type: Text
+                identifier: company
+                label: Company
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: Firma
+              -
+                defaultValue: ''
+                type: Text
+                identifier: email
+                label: Email
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: Email-Adresse
+                    required: required
+                validators:
+                  -
+                    identifier: NotEmpty
+                  -
+                    identifier: EmailAddress
+          -
+            type: GridColumn
+            identifier: gridcolumn-right
+            label: ''
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  xs:
+                    numbersOfColumnsToUse: '12'
+                  sm:
+                    numbersOfColumnsToUse: '6'
+                  md:
+                    numbersOfColumnsToUse: '6'
+                  lg:
+                    numbersOfColumnsToUse: '6'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: subject
+                label: Thema
+                properties:
+                  fluidAdditionalAttributes:
+                    placeholder: Thema
+                    required: required
+                validators:
+                  -
+                    identifier: NotEmpty
+              -
+                defaultValue: ''
+                type: Textarea
+                identifier: message
+                label: 'Deine Nachricht'
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                    placeholder: 'Deine Nachricht'
+                validators:
+                  -
+                    identifier: NotEmpty
+          -
+            properties:
+              options:
+                Gaming: Gaming
+                News: News
+                Guides: Guides
+            type: SingleSelect
+            identifier: singleselect-1
+            label: 'Ihr Interessensgebiet'
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: 'Nächster Schritt'
+    type: Page
+    identifier: page-1
+    label: Firmendaten
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            type: GridColumn
+            identifier: gridcolumn-1
+            label: 'Grid: Column'
+            renderables:
+              -
+                defaultValue: ''
+                type: Email
+                identifier: email-2
+                label: 'Firmen E-Mail Adresse'
+                validators:
+                  -
+                    identifier: EmailAddress
+          -
+            type: GridColumn
+            identifier: gridcolumn-2
+            label: 'Grid: Column'
+            renderables:
+              -
+                properties:
+                  text: ''
+                type: StaticText
+                identifier: statictext-1
+                label: 'Newsletter anmelden?'
+              -
+                properties:
+                  options:
+                    Ja: Ja
+                    Nein: Nein
+                type: RadioButton
+                identifier: radiobutton-1
+                label: 'Newsletter?'
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Absenden
+    type: SummaryPage
+    identifier: summarypage-1
+    label: Zusammenfassung

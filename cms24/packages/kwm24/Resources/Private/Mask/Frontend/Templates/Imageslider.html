@@ -1,0 +1,67 @@
+
+
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+
+<!-- Bessere CDN-Version -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+
+
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <f:for each="{data.tx_mask_slider}" as="slide">
+            <div class="swiper-slide">
+                <div class="slide-content">
+
+                    <div class="slide-image">
+                        <f:if condition="{slide.tx_mask_img}">
+                            <f:image image="{slide.tx_mask_img.0}" alt="{slide.tx_mask_string}" />
+                        </f:if>
+                    </div>
+
+                    <div class="slide-text">
+                        <h2>{slide.tx_mask_string}</h2>
+                        <p>{slide.tx_mask_text}</p>
+                    </div>
+
+                </div>
+            </div>
+        </f:for>
+    </div>
+
+    <!-- Navigation & Pagination -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,
+            slidesPerView: 1, // <<< WICHTIG!!
+            centeredSlides: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+    });
+
+</script>
+
+
+
+</html>

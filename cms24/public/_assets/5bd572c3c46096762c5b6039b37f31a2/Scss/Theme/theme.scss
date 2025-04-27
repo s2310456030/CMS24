@@ -1,0 +1,86 @@
+//
+// Variables
+//
+@import "variables";
+@import "carousel";
+//
+// Import needed Bootstrap Package Files
+//
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme.scss";
+@import "_navbar.scss";
+@import "card";
+
+@import "_footerIcons.scss";
+@import "_AboutMe.scss";
+@import "_mainpagenews.scss";
+@import "_slider.scss";
+@import "_newsandguides.scss";
+@import "_lightbox.scss";
+@import "_userprofile.scss";
+#page-header{
+  background-image: url("banner.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+
+  // background-color: orange !important;
+  .nav-link{
+    height: 4em;
+    color: black;
+    font-size: 24px;
+
+  }
+}
+.footer-section-meta{
+  $dark: #E34049;
+  background: rgba($dark, 0.65);
+
+  color: black;
+  font-style: italic;
+}
+
+.frame-background-secondary{
+  box-shadow: 1.5px 5px 6.5px rgba(0, 0, 0, 0.39);
+  border: 0;
+  border-radius: 10px;
+}
+.element-header{
+  font-weight: bold;
+  text-align: left;
+}
+
+img{
+  border: 0;
+ // border-radius: 50px;
+}
+.frame-container-default img{
+  max-height: 300px;
+  max-width: 200px;
+}
+
+.nav-item {
+  border: solid black 0.5px;
+  background: white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.nav-link, nav-link-main{
+  padding: 2px 5px;
+  margin: 0px;
+}
+
+#page-header .nav-link {
+  height: 1em;
+  color: black;
+  font-size: 24px;
+}
+
+#p16 img{
+  border-radius: 200px;
+}
+
+li.nav-item{
+  max-width: 150px;
+}
+

@@ -1,0 +1,49 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+
+<f:if condition="{data.tx_mask_slider_repeater}">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <f:for each="{data.tx_mask_slider_repeater}" as="data_item">
+                <div class="swiper-slide">
+                    <f:if condition="{data_item.tx_mask_slider_header}">
+                        <h2>{data_item.tx_mask_slider_header}</h2>
+                    </f:if>
+                    <f:if condition="{data_item.tx_mask_slider_text}">
+                        <p>{data_item.tx_mask_slider_text -> f:format.nl2br()}</p>
+                    </f:if>
+                    <f:for each="{data_item.tx_mask_slider_img}" as="file">
+                        <f:media file="{file}" width="1000" />
+                        <p>{file.description}</p>
+                    </f:for>
+                </div>
+            </f:for>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</f:if>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        new Swiper(".swiper-container", {
+            loop: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+    });
+</script>
+</html>

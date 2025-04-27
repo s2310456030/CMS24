@@ -1,0 +1,139 @@
+{
+    "version": "8.1.0",
+    "restructuringDone": false,
+    "tables": {
+        "tt_content": {
+            "elements": {
+                "imageslider": {
+                    "color": "#000000",
+                    "colorOverlay": "#000000",
+                    "columns": [
+                        "tx_mask_slider"
+                    ],
+                    "description": "",
+                    "descriptions": [
+                        ""
+                    ],
+                    "icon": "",
+                    "iconOverlay": "",
+                    "key": "imageslider",
+                    "label": "Imageslider",
+                    "labels": [
+                        ""
+                    ],
+                    "shortLabel": "",
+                    "sorting": 1
+                }
+            },
+            "sql": {
+                "tx_mask_slider": {
+                    "tt_content": {
+                        "tx_mask_slider": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_slider": {
+                    "config": {
+                        "appearance": {
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "new": 1,
+                                "sort": 1
+                            },
+                            "levelLinksPosition": "top",
+                            "showAllLocalizationLink": 1,
+                            "showNewRecordLink": 1,
+                            "showPossibleLocalizationRecords": 1,
+                            "useSortable": 1
+                        },
+                        "foreign_field": "parentid",
+                        "foreign_sortby": "sorting",
+                        "foreign_table": "--inlinetable--",
+                        "foreign_table_field": "parenttable",
+                        "type": "inline"
+                    },
+                    "fullKey": "tx_mask_slider",
+                    "key": "slider",
+                    "type": "inline"
+                }
+            }
+        },
+        "tx_mask_slider": {
+            "sql": {
+                "tx_mask_img": {
+                    "tx_mask_slider": {
+                        "tx_mask_img": "int(11) unsigned DEFAULT '0' NOT NULL"
+                    }
+                },
+                "tx_mask_string": {
+                    "tx_mask_slider": {
+                        "tx_mask_string": "varchar(255) DEFAULT '' NOT NULL"
+                    }
+                },
+                "tx_mask_text": {
+                    "tx_mask_slider": {
+                        "tx_mask_text": "mediumtext"
+                    }
+                }
+            },
+            "tca": {
+                "tx_mask_img": {
+                    "config": {
+                        "appearance": {
+                            "elementBrowserEnabled": 1,
+                            "enabledControls": {
+                                "delete": 1,
+                                "dragdrop": 1,
+                                "hide": 1,
+                                "info": 1,
+                                "localize": 1,
+                                "sort": 0
+                            },
+                            "fileByUrlAllowed": 1,
+                            "fileUploadAllowed": 1,
+                            "useSortable": 1
+                        },
+                        "minitems": ""
+                    },
+                    "fullKey": "tx_mask_img",
+                    "inlineParent": "tx_mask_slider",
+                    "key": "img",
+                    "onlineMedia": [
+                        "youtube",
+                        "vimeo"
+                    ],
+                    "order": 3,
+                    "type": "media"
+                },
+                "tx_mask_string": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "input"
+                    },
+                    "fullKey": "tx_mask_string",
+                    "inlineParent": "tx_mask_slider",
+                    "key": "string",
+                    "order": 1,
+                    "type": "string"
+                },
+                "tx_mask_text": {
+                    "config": {
+                        "nullable": 0,
+                        "type": "text",
+                        "wrap": "virtual"
+                    },
+                    "fullKey": "tx_mask_text",
+                    "inlineParent": "tx_mask_slider",
+                    "key": "text",
+                    "order": 2,
+                    "type": "text"
+                }
+            }
+        }
+    }
+}
